@@ -1,0 +1,145 @@
+@charset "utf-8";
+@import 'settings';
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: small;
+  line-height: 1.5;
+}
+body {
+  color: $baseColor;
+  background: #fff;
+  -webkit-text-size-adjust: none;
+  @include fsz($baseSize, 13);
+  .ie & {
+    @include fsz($baseSize, 13.4);
+  }
+  @include mq(sp) {
+    @include fsz($baseSizeSp, 13);
+  }
+  a {
+    color: $baseColor;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    max-width: 100%;
+    -webkit-touch-callout: none;
+    line-height: 1;
+  }
+}
+body,
+pre,
+input,
+textarea,
+select {
+  font-family: 'Ysabeau Infant', sans-serif;
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+select {
+  @include mq(sp) {
+    // font-size: 16px;
+  }
+}
+
+//----------------------------------------------//
+// ie8
+//----------------------------------------------//
+html.ie8 {
+  .view_tab,
+  .view_tab_sp,
+  .view_sp {
+    display: none !important;
+  }
+  #container {
+    min-width: $columnWidth * 1px !important;
+    margin: auto;
+    font-size: 100% !important;
+  }
+}
+
+//----------------------------------------------//
+// .view_xxx
+//----------------------------------------------//
+body {
+  @include mq(pc) {
+    .view_tab-sp,
+    .view_tab {
+      display: none !important;
+    }
+  }
+  @include mq(pc_tab) {
+    .view_sp {
+      display: none !important;
+    }
+  }
+  @include mq(tab_sp) {
+    .view_pc {
+      display: none !important;
+    }
+  }
+  @include mq(sp) {
+    .view_pc-tab,
+    .view_tab {
+      display: none !important;
+    }
+  }
+}
+
+//----------------------------------------------//
+// #container
+//----------------------------------------------//
+#container {
+  overflow: hidden;
+  @include mq(pc) {
+    width: 100%;
+    margin: auto;
+  }
+  @include mq(pc_tab) {
+    font-size: 100% !important;
+  }
+  // @include mq(pc) {
+  // 	@include mq(pc_l) {}	//1920 ~ 1560			(1920-1200)/2+1
+  // 	@include mq(pc_s) {} //1559 ~ $columnWidth
+  // }
+  // @include mq(pc_tab) {}
+  // @include mq(tab) {}
+  // @include mq(tab_sp) {}
+  // @include mq(sp) {}
+  // @include mq(min_w, 1px) {}
+  // @include mq(max_w, 1700px) {}
+  // @include mq(min_max_w, 768px, 1023px) {}
+}
+
+//----------------------------------------------//
+// #header
+//----------------------------------------------//
+#header {
+}
+
+//----------------------------------------------//
+// #contents
+//----------------------------------------------//
+#contents {
+}
+
+//----------------------------------------------//
+// #footer
+//----------------------------------------------//
+#footer {
+}
+
+html.lower #contents {
+}
+
+table.tbl_basic {
+}

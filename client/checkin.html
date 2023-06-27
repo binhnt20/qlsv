@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student management</title>
+    <link rel="stylesheet" href="./files/css/common.css" />
+    <link rel="stylesheet" href="./files/css/homepage.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <script src="./files/js/localStore.js"></script>
+    <script src="./files/js/script.js"></script>
+    <script src="./files/js/checkin.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="homepage">
+        <p class="back-to-home">
+          <a href="./index.html">&#8592; Quay lại danh sách lớp</a>
+        </p>
+        <p class="welcome">
+          Xin chào <span id="userCurrent"></span>!
+          <span id="logout">Đăng xuất</span>
+        </p>
+        <table class="tbl_checkin">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Học sinh</th>
+              <th>Điểm danh lúc</th>
+              <th>Lớp</th>
+            </tr>
+          </thead>
+          <tbody id="list-checkin__body"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

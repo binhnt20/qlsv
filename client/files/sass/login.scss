@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import 'settings';
+
+.login-page {
+	@extend %bw;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+	form {
+		width: 500px;
+		height: 700px;
+		border: 1px solid #ddd;
+		padding: 1rem;
+		border-radius: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		input,
+		button {
+			outline: none;
+			padding: 1rem;
+			border-radius: 0.7rem;
+			border: 1px solid #ddd;
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+		.login-btn {
+			font-size: 1.3rem;
+			font-weight: 700;
+			text-align: center;
+			text-transform: uppercase;
+			color: #fff;
+			display: inline-block;
+			width: 150px;
+			margin: 0 auto;
+			cursor: pointer;
+			padding-block: 1.2rem;
+			background-color: #333;
+			transition: 0.4s;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}
